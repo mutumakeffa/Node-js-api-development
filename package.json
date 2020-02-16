@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^19.0.5",
+    "@hapi/hapi": "^19.1.1",
     "good": "^8.1.2",
     "good-console": "^8.0.0",
-    "hapi": "^18.1.0"
+    "hapi": "^18.1.0",
+    "joi": "^14.3.1"
   }
 }

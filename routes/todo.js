@@ -1,6 +1,8 @@
 // This is where we are going to have all our routes for the todo resource
 // This file (module) will export a list of routes
 
+// require Joi to be able to use it
+const Joi = require('joi');
 
 const todoList = [
     {
@@ -55,7 +57,15 @@ const todoList = [
         todoList.push(todo);
         return h.response ({ message: 'created' });
       },
+      config: {
+        validate: {
+          payload: {
+            title: Joi.string().required(),
+          }
+        }
+      }
     },
+  
 
     {
       method: 'PUT',
@@ -92,7 +102,7 @@ const todoList = [
       handler: (request, reply) => {
         const index = request.params.id - 1;
         delete todoList[index]; // replaces with `undefined`
-        return reply({ message: 'deleted' });
+        return h.response({ message: 'deleted' });
       },
     },
     
