@@ -45,8 +45,15 @@ const todoList = [
         } else {
           return h.response({ message: 'Not found' }).code(404);
         }
-
       },
+      config: {
+        validate: {
+          params: {
+            id: Joi.number()
+          }
+        }
+      }
+
     },
 
     {
@@ -61,6 +68,7 @@ const todoList = [
         validate: {
           payload: {
             title: Joi.string().required(),
+            description: Joi.string().required()
           }
         }
       }
