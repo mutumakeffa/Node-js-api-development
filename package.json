@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^19.1.1",
+    "@hapi/hapi": "^21.4.8",
     "@hapi/joi": "^17.1.0",
     "good": "^8.1.2",
     "good-console": "^8.0.0",
